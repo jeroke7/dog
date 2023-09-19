@@ -1,0 +1,27 @@
+.title {
+    /* margin: top right bottom left */
+    /* margin: top/bottom left/right*/
+    /* margin: top/bottom/left/right*/
+    margin: 1px 0;
+    font-size: 18px; 
+    color:navy;
+    text-align: center;
+    font-weight: bold;
+}
+.inc {
+    font-size: 12px;
+}
+.address {
+    margin: 1px 0;
+    font-size: 13px; 
+}
+.homepage {
+    margin: 1px 0;
+    font-size: 16px;
+}
+.first-letter {
+    font-size: 32px;
+}
+.bot-line {
+    margin: 15px;
+}
