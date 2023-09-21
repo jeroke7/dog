@@ -25,3 +25,30 @@
 .bot-line {
     margin: 15px;
 }
+.middle {
+    float: left;
+    color: navy;
+    margin-left: 45px;
+    line-height: 1.5;
+}
+.middle2 {
+    
+    margin-right: 45px;
+    line-height: 1.5;
+}
+a {
+    color: purple;
+}
+.red-links {
+    color: red;
+}
+.geico {
+    text-align: center;
+    color: navy;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.comments {
+    color: navy;
+    font-size: 13px;
+}
