@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana;
+    /* width, if percent, is relative to its parent/container */
+    /* margin: 0 auto; */ 
+    background-color: maroon;
+}
+.main {
+    background: white;
+    border: 2px dashed blue;
+    margin: 4px
+}
+.title {
+    text-align: center;
+}
+.p1 {
+    text-align: left;
+}
+img {
+    border: dotted;
+    
+}
