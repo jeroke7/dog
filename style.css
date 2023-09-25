@@ -18,6 +18,7 @@
 .homepage {
     margin: 1px 0;
     font-size: 16px;
+    text-transform: capitalize;
 }
 .first-letter {
     font-size: 32px;
@@ -30,17 +31,30 @@
     color: navy;
     margin-left: 45px;
     line-height: 1.5;
+    width: 40%;
 }
 .middle2 {
-    
     margin-right: 45px;
     line-height: 1.5;
+    width: 40%;
 }
 a {
     color: purple;
 }
 .red-links {
     color: red;
+}
+.link-dates {
+    color: navy;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+.link-subtext {
+    color: navy;
+    font-size: 10px;
+}
+.bottom {
+    float: left;
 }
 .geico {
     text-align: center;
