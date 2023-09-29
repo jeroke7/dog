@@ -1,12 +1,46 @@
-.container {
+.all-containers {
+    justify-content: center;
+}
+.first-container {
     display: flex;
-   /* flex-direction: column;*/
-   justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     border: 2px solid black;
+    margin: 10px 10px;
 }
 .box {
     width: 50px;
     height: 75px;
     text-align: center;
+    font-size: 30px;
+    /* border: 2px solid black; */
+    margin: 10px 10px;
+    background: salmon;
+}
+.two-and-three {
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    margin: 10px 10px;
+}
+.second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border: 2px solid black;
+    margin: 0 auto;
+    width: 400px;
+}
+.four-and-five {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+.six-and-seven {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
 }
