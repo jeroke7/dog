@@ -1,0 +1,54 @@
+.chal-one {
+    display: flex;
+    align-items: center;
+    /* margin: 0 auto; */
+    text-transform: capitalize;
+    /* padding: 10px 10px; */
+}
+.nav {
+    display: flex;
+    /* flex-direction: row; */
+    text-transform: capitalize;
+    width: 100px;
+    height: 540px;
+    /* border: 2px solid black; */
+    padding: 10px 10px;
+    background: lightgray;
+}
+.header {
+    display: flex;
+    background: greenyellow;
+    width: 620px;
+    height: 100px;
+    padding: 10px 10px;
+}
+.art-foot-as {
+    display: flex;
+    flex-direction: row;
+}
+.art-foot {
+    display: flex;
+    flex-direction: column;
+}
+.article {
+    display: flex;
+    background: white;
+    width: 500px;
+    height: 300px;
+    padding: 10px 10px;
+}
+.footer {
+    display: flex;
+    background: greenyellow;
+    width: 500px;
+    height: 100px;
+    padding: 10px 10px;
+}
+.aside {
+    display: flex;
+    background: lightgrey;
+    width: 100px;
+    height: 420px;
+    flex-direction: row;
+    padding: 10px 10px;
+}
