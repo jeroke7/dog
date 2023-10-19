@@ -7,9 +7,10 @@ body header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 100px;
     background:rgb(216, 65, 90);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-
 }
 .header-left {
     display: flex;
@@ -23,6 +24,7 @@ body header {
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
+
     padding: 10px 10px;
     background: white;
     border: 10px solid rgb(253, 152, 169);
@@ -33,7 +35,9 @@ body header {
     align-items: center;
 }
 .header-links a:hover {
-    color: rgb(253, 152, 169);
+    background: palegreen;
+    color: darkgreen;
+    border: 10px rgb(253, 152, 169) inset;
 }
 .header-links a {
     display: flex;
@@ -41,10 +45,20 @@ body header {
     text-decoration: solid;
     background: white;
     color: rgb(216, 65, 90);
-    border: 10px solid rgb(253, 152, 169);
+    border: 10px outset rgb(253, 152, 169);
+    border-radius: 100px;
 }
 .index-foot {
     text-align: center;
     color: rgb(253, 152, 169);
     font-size: 15px;
+}
+.index-foot a {
+    color:rgb(253, 152, 169);
+}
+.index-foot a:hover {
+    color: palegreen;
+}
+.footer-links {
+    
 }
