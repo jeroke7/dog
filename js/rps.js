@@ -29,24 +29,25 @@ rockButton.addEventListener('click', () => {
 })
 paperButton.addEventListener('click', () => {
     userImg.src = "../img/rps" + paperButton.id + ".png"
+    compChoice()
 })
 scissorsButton.addEventListener('click', () => {
     userImg.src = "../img/rps" + scissorsButton.id + ".png"
+    compChoice()
 })
 
 function compChoice () {
     const randNum = Math.floor(Math.random()*3)
-    const choices = choices[randNum]
-    compImg.src = "../img/rps/" + comp + ".png"
-    return comp
-    console.log(comp)
+    const comp = choices[randNum]
+    console.log(choices)
+    compImg.src = "../img/rps" + comp + ".png"
 }
 
-function winLose(userChoice) {
-    console.log(comp, userChoice)
-}
+// function winLose(userChoice) {
+//     console.log(comp, userChoice)
+// }
 
-winLose('rock')
+// winLose('rock')
 
 
 
