@@ -2,8 +2,9 @@
 const rockButton = document.getElementById('rock')
 const paperButton = document.getElementById('paper')
 const scissorsButton = document.getElementById('scissors')
-// const yourScore = document.getElementById('.user-score')
-// const computerScore = document.getElementById('.computer-score')
+const resetButton = document.getElementById('reset')
+const yourScore = document.querySelector('.user-score')
+const compScore = document.querySelector('.computer-score')
 const result = document.querySelector('.result')
 const userImg = document.querySelector('.user-img')
 const compImg = document.querySelector('.comp-img')
@@ -57,18 +58,28 @@ function compChoice () {
 function winLose(userChoice) {
     if (userChoice == "rock" && comp == "paper"){
         result.innerText = 'Computer Wins :('
+        computerScore = computerScore + 1
+        compScore.innerText = computerScore
     } else if (userChoice == "scissors" && comp == "rock"){
         result.innerText = 'Computer Wins :('
+        computerScore = computerScore + 1
+        compScore.innerText = computerScore
     } else if (userChoice == "paper" && comp == "scissors"){
         result.innerText = 'Computer Wins :('
-    } else if (comp == "rock" && userChoice == "scissors"){
-        result.innerText = 'You Win :)'
+        computerScore = computerScore + 1
+        compScore.innerText = computerScore
     } else if (comp == "rock" && userChoice == "paper"){
         result.innerText = 'You Win :)'
+        userScore = userScore + 1
+        yourScore.innerText = userScore
     } else if (comp == "paper" && userChoice == "scissors"){
         result.innerText = 'You Win :)'
+        userScore = userScore + 1
+        yourScore.innerText = userScore
     } else if (comp == "scissors" && userChoice == "rock"){
         result.innerText = 'You Win :)'
+        userScore = userScore + 1
+        yourScore.innerText = userScore
     } else if (comp == "rock" && userChoice == "rock"){
         result.innerText = 'Tie! :0'
     } else if (comp == "paper" && userChoice == "paper"){
@@ -77,8 +88,11 @@ function winLose(userChoice) {
         result.innerText = 'Tie! :0'
     }
 }
-
-
-
-
-
+resetButton.addEventListener('click', () => {
+userImg.src = "../img/rpsall.png" 
+compImg.src = "../img/rpsall.png" 
+userScore = 0
+yourScore.innerText = userScore
+computerScore = 0
+compScore.innerText = computerScore
+})
