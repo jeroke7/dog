@@ -6,6 +6,7 @@ const resetButton = document.getElementById('reset')
 const yourScore = document.querySelector('.user-score')
 const compScore = document.querySelector('.computer-score')
 const result = document.querySelector('.result')
+const overall = document.querySelector('.overall')
 const userImg = document.querySelector('.user-img')
 const compImg = document.querySelector('.comp-img')
 
@@ -51,42 +52,43 @@ scissorsButton.addEventListener('click', () => {
 function compChoice () {
     const randNum = Math.floor(Math.random()*3)
     comp = choices[randNum]
-    console.log(comp)
+    // console.log(comp)
     compImg.src = "../img/rps" + comp + ".png"
 }
 
 function winLose(userChoice) {
     if (userChoice == "rock" && comp == "paper"){
-        result.innerText = 'Computer Wins :('
+        result.innerText = 'Computer point'
         computerScore = computerScore + 1
         compScore.innerText = computerScore
     } else if (userChoice == "scissors" && comp == "rock"){
-        result.innerText = 'Computer Wins :('
+        result.innerText = 'Computer point'
         computerScore = computerScore + 1
         compScore.innerText = computerScore
     } else if (userChoice == "paper" && comp == "scissors"){
-        result.innerText = 'Computer Wins :('
+        result.innerText = 'Computer point'
         computerScore = computerScore + 1
         compScore.innerText = computerScore
     } else if (comp == "rock" && userChoice == "paper"){
-        result.innerText = 'You Win :)'
+        result.innerText = 'Your point'
         userScore = userScore + 1
         yourScore.innerText = userScore
     } else if (comp == "paper" && userChoice == "scissors"){
-        result.innerText = 'You Win :)'
+        result.innerText = 'Your point'
         userScore = userScore + 1
         yourScore.innerText = userScore
     } else if (comp == "scissors" && userChoice == "rock"){
-        result.innerText = 'You Win :)'
+        result.innerText = 'Your point'
         userScore = userScore + 1
         yourScore.innerText = userScore
     } else if (comp == "rock" && userChoice == "rock"){
-        result.innerText = 'Tie! :0'
+        result.innerText = 'Tie!'
     } else if (comp == "paper" && userChoice == "paper"){
-        result.innerText = 'Tie! :0'
+        result.innerText = 'Tie!'
     } else if (comp == "scissors" && userChoice == "scissors"){
-        result.innerText = 'Tie! :0'
+        result.innerText = 'Tie!'
     }
+    scoreCheck()
 }
 resetButton.addEventListener('click', () => {
 userImg.src = "../img/rpsall.png" 
@@ -95,4 +97,28 @@ userScore = 0
 yourScore.innerText = userScore
 computerScore = 0
 compScore.innerText = computerScore
+result.innerText = 'Start Game'
+overall.innerText = '--'
 })
+
+function scoreCheck() {
+    if (userScore == 3){
+        overall.innerText = 'You win! :)'
+        // userScore = userScore
+        // yourScore.innerText = userScore
+        // computerScore = computerScore
+        // compScore.innerText = computerScore
+        result.innerText = 'Reset Game'
+    } else if (computerScore == 3){
+        overall.innerText = 'You Lose! :('
+        // userScore = userScore
+        // yourScore.innerText = userScore
+        // computerScore = computerScore
+        // compScore.innerText = computerScore
+        result.innerText = 'Reset Game'
+    }
+}
+
+
+
+
