@@ -60,3 +60,10 @@ button {
     background-color: rgb(80, 80, 224);
     color:rgb(197, 212, 226)
 }
+/* media query */
+@media (max-width: 900px) {
+    img {
+        width: 200px;
+        height:200px
+    }
+}
