@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    /* font-size: 32px; */
+    margin: 0;
+    padding: 0;
+    font-family: prompt, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-section {
+    padding-top: 1em;
+    padding-bottom: 15em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    /* position: sticky; */
+    /* top: 50px; */
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-bottom: 10em;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    background-color: white;
+    color: black;
+}
+
+.header-left {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+/* .header-left i {
+    font-size: 10px;
+} */
+
+.header-left p {
+    margin-left: .25em;
+    /* clamp(min, grow, max) */
+    font-size: clamp(1rem, 5.5vw, 2rem);
+}
+.header-left i {
+    margin-left: .25em;
+    /* clamp(min, grow, max) */
+    font-size: clamp(2rem, 5.5vw, 3rem);
+}
+
+nav a {
+    font-size: clamp(.25rem, 2vw, 1rem);
+    margin-left: .25em;
+    color: black;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-image: url(../img/ableton.jpg);
+    /* border: 2px solid orangered; */
+}
+
+.hero h1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ff764d;
+}
+.hero p {
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: clamp(1.25rem, 1vw, 3rem);
+}
