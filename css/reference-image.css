@@ -12,6 +12,10 @@ a {
     color: black;
 }
 
+.header-left i {
+    margin-right: 10px;
+}
+
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -24,8 +28,6 @@ a {
 }
 
 header {
-    /* position: sticky; */
-    /* top: 50px; */
     width: 90%;
     max-width: 1800px;
     margin: 0 auto;
@@ -33,45 +35,38 @@ header {
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* align-items: center; */
     background-color: white;
     color: black;
 }
 
 .header-left {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
-/* .header-left i {
-    font-size: 10px;
-} */
-
 .header-left p {
-    /* margin-left: .25em; */
-    /* clamp(min, grow, max) */
     font-size: clamp(1rem, 5.5vw, 2rem);
 }
 .header-left i {
     margin-left: .25em;
-    /* clamp(min, grow, max) */
     font-size: clamp(2rem, 5.5vw, 3rem);
 }
 
 nav a {
-    font-size: clamp(.25rem, 2vw, 1rem);
+    font-size: clamp(1rem);
     margin-left: .25em;
-    text-transform: uppercase;
 }
 
 .hero {
     align-items: center;
+    font-size: 50px;
     max-width: 1800px;
     margin: 0 auto;
     padding: 200px;
     background-image: url(../img/ableton.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 90%;
     /* border: 2px solid orangered; */
 
@@ -81,7 +76,34 @@ nav a {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    color: #ff764d;
+    color: #ff4d47;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.larger-paragraph {
+    font-weight: bold;
+}
+
+.images-yellow {
+    display: flex;
+    justify-content: center;
+}
+
+.images-yellow img {
+    width: 50%;
+    /* border: 2px solid purple; */
+    padding: 0 30px;
+}
+
+.disk-jockey {
+    background: #fbffa7;
+}
+
+.body-paragraphs {
+    margin: 0 200px;
 }
 
 footer {
@@ -89,7 +111,7 @@ footer {
     flex-direction: column;
     margin-left: 80px;
     margin-top: 80px;
-    border: 2px purple solid;
+    /* border: 2px purple solid; */
 
 }
 
@@ -98,7 +120,7 @@ footer {
     flex-direction: column;
     padding-top: 10px;
     /* align-items: center; */
-    border: 2px orange solid;
+    /* border: 2px orange solid; */
 }
 
 .foot-col {
@@ -106,7 +128,7 @@ footer {
     flex-direction: column;
     padding-top: 50px;
     /* justify-content: center; */
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 footer a {
     display: flex;
@@ -116,4 +138,26 @@ footer a {
 
 h5 {
     font-size: 15px;
+}
+
+input {
+    border: none;
+    background-color: lightgrey;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+    width: 700px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.social-icons {
+    display:flex;
+    font-size: 50px;
 }
