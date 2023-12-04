@@ -1,16 +1,38 @@
+* {
+    box-sizing: border-box;
+    /* font-size: 32px; */
+    margin: 0;
+    padding: 0;
+    font-family: prompt, sans-serif;
+    /* border: 2px groove green; */
+}
 .index-all {
     display: flex;
     flex-direction: column;
-    background: rgb(216, 65, 90);
+    background: rgb(255, 210, 218);
 }
-body header {
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 10px;
-    border-radius: 100px;
-    background:rgb(216, 65, 90);
+    border-radius: 20px;
+    background:rgb(253, 152, 169);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
 }
 .header-left {
     display: flex;
@@ -18,43 +40,62 @@ body header {
     align-items: center;
     text-align: center;
     padding: 10px 10px;
-    color: rgb(253, 152, 169);
+    color: rgb(216, 65, 90);
 }
+.hero {
+    align-items: center;
+    font-size: 50px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 200px;
+    background-image: url(../img/abletonvid.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+}
+.hero h1{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(216, 65, 90);
+}
+
 .index-body {
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
-
     padding: 10px 10px;
-    background: white;
+    /* background: white; */
     border: 10px solid rgb(253, 152, 169);
+    border-radius: 20px;
 }
-.header-links {
+.nav {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.header-links a:hover {
-    background: palegreen;
-    color: darkgreen;
-    border: 10px rgb(253, 152, 169) inset;
+.nav a:hover {
+    background: white;
+    color: rgb(216, 65, 90);
+    border: 10px solid rgb(253, 152, 169);
+    border-radius: 20px;
 }
-.header-links a {
+.nav a {
     display: flex;
     padding: 10px 10px;
     text-decoration: solid;
-    background: white;
+    background: rgb(253, 152, 169);
     color: rgb(216, 65, 90);
-    border: 10px outset rgb(253, 152, 169);
-    border-radius: 100px;
+    border-radius: 50px;
 }
 .index-foot {
     text-align: center;
-    color: rgb(253, 152, 169);
-    font-size: 15px;
+    color: rgb(216, 65, 90);
+    font-size: 20px;
 }
 .index-foot a {
-    color:rgb(253, 152, 169);
+    color:rgb(216, 65, 90);
 }
 .index-foot a:hover {
     color: palegreen;
