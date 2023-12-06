@@ -11,7 +11,11 @@
     flex-direction: column;
     background: rgb(255, 210, 218);
 }
-
+a {
+    text-decoration: solid;
+    color:rgb(216, 65, 90);
+    font-weight: bolder;
+}
 .hero-section{
     display: flex;
     flex-direction: column;
@@ -69,7 +73,61 @@ header {
     /* background: white; */
     border: 10px solid rgb(253, 152, 169);
     border-radius: 20px;
+    background: white;
 }
+
+.links-to-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 10px;
+    /* width: 400px; */
+    /* height: 400px; */
+    background: white;
+    border: 10px solid rgb(253, 152, 169);
+    border-radius: 20px;
+}
+
+
+.links-to-projects a {
+    border: 10px solid rgb(253, 152, 169);
+    border-radius: 20px;
+    padding: 5px;
+    /* height: 200px; */
+    /* width: 200px; */
+    text-align: center;
+    margin: 5px 5px;
+    /* padding-top: 150px; */
+}
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+
+}
+
+.image {
+    border: 2px solid black;
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+}
+
 .nav {
     display: flex;
     flex-direction: row;
