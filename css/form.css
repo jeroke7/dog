@@ -1,19 +1,95 @@
-.first-row {
+.asterisk {
+    color: red;
+}
+.form-item {
+    width: 200%;
+}
+.labels {
+    width: 40%px;
+}
+.terms-conditions {
+    color:turquoise;
+}
+
+.row1 {
     display: flex;
     align-items: center;
 }
-.first-row .form-item {
+.row1 .form-item {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
 
-.second-row {
+.row2 {
     display: flex;
-    align-items: start;
+    flex-direction: row;
+    /* align-items: center; */
 }
-
-.second-row .form-item {
+.row2 .form-item {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+.row2a {
+    display: flex;
+    flex-direction: column;
+}
+.row2b {
+    display: flex;
+    flex-direction: row;
+}
+
+.row3 {
+    display: flex;
+    align-items: center;
+}
+.row3 .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.row4 {
+    display: flex;
+    align-items: center;
+}
+.row4 .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.row5 {
+    display: flex;
+    align-items: center;
+}
+.row5 .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.row6 {
+    display: flex;
+    align-items: center;
+}
+.row6 .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.row7 {
+    display: flex;
+    align-items: center;
+}
+.row7 .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button {
+    float: right;
 }

@@ -8,8 +8,9 @@
 </head>
 <body>
    <h1>Job Application</h1>
-    <div class="first-row"> 
-        <h3>Full Name</h3>
+   <h3>Please complete the form below to apply for a position with us.</h3>
+    <div class="row1"> 
+        <h3 class="labels">Full Name <span class="asterisk">*</span></h3>
         <div class="form-item">
         <input type="text" id="first-name">
         <label for="first-name">First Name</label>
@@ -23,23 +24,28 @@
         <label for="last-name">Last Name</label>
         </div>
     </div>
-    <div class="second-row">
-        <h3>Current Address</h3>
-        <div class="form-item">
-        <input type="text" id="street-address">
-        <label for="street-address">Street Address</label>
+
+    <div class="row2">
+        <h3 class="labels">Current Address</h3>
+        <div class="row2cont">
+        <div class="row2a">
+            <div class="form-item">
+            <input type="text" id="street-address">
+            <label for="street-address">Street Address</label>
+            </div>
+            <div class="form-item">
+            <input type="text" id="street-address-line-2">
+            <label for="street-address-line-2">Street Address Line 2</label>
         </div>
-        <div class="form-item">
-        <input type="text" id="street-address-line-2">
-        <label for="street-address-line-2">Street Address Line 2</label>
         </div>
-        <div class="form-item">
-        <input type="text" id="city">
-        <label for="city">City</label>
-        <input type="text" id="state-province">
-        <label for="state-province">State / Province</label>
-        </div>
-        <div class="form-item">
+        <div class="row2b">
+            <div class="form-item">
+                <input type="text" id="city">
+                <label for="city">City</label>
+                <input type="text" id="state-province">
+                <label for="state-province">State / Province</label>
+            </div>
+            <div class="form-item">
             <input type="text" id="postal-zip">
             <label for="postal-zip">Postal / Zip Code</label>
             <!-- <input type="text" id="country"> -->
@@ -52,10 +58,53 @@
                 <option value="iceland">Iceland</option>
             </select>
             <label for="country">Country</label>
+            </div>
+        </div>
         </div>
     </div>
-    <div class="third-row">
-        continue
+
+    <div class="row3">
+        <h3 class="labels">Email Address <span class="asterisk">*</span></h3>
+        <div class="form-item">
+        <input type="text" id="email" placeholder="ex: myname@example.com">
+        </div>
     </div>
+    <div class="row4">
+        <h3 class="labels">Phone Number</h3>
+        <div class="form-item">
+        <input type="tel" id="area-code">
+        <label for="area-code">Area Code</label>
+        </div>
+        <div class="form-item">
+        <input type="tel" id="phone-num">
+        <label for="phone-num">Phone Number</label>
+        </div>
+    </div>
+
+    <div class="row5">
+        <h3 class="labels">Applying for<br>Position <span class="asterix">*</span></h3>
+        <select name="position" id="position">
+            <option value="select">Please Select</option>
+            <option value="uiux-designer">UI/UX Designer</option>
+            <option value="front-end-dev">Front-End Developer</option>
+            <option value="back-end-dev">Back-End-Developer</option>
+        </select>
+    </div>
+    <div class="row6">
+        <h3 class="labels">Start date</h3>
+        <div class="form-item">
+            <input type="date">
+        </div>
+    </div>
+    <div class="row7">
+        <h3 class="labels">Upload Resume <span class="asterisk">*</span></h3>
+        <div class="form-item">
+            <input type="file">
+        </div>
+    </div>
+    <input type="checkbox">
+    <label for="terms-conditions">I agree to <a href="#"" class="terms-conditions">terms & conditions</a>. <span class="asterisk">*</span></label>
+    <!-- take photo section? -->
+    <button type="submit" id="submit">Submit</button>
 </body>
 </html>

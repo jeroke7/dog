@@ -149,18 +149,18 @@ header {
     border-radius: 50px;
 }
 
-main {
+/* main {
     height: 72vh;
-}
+} */
 
-form {
+/* form {
     width: 90%;
     margin: 3em auto;
 }
 
 label {
     display: block;
-}
+} */
 
 .index-foot {
     text-align: center;
