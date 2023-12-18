@@ -1,22 +1,22 @@
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* font-size: 32px; */
     margin: 0;
     padding: 0;
     font-family: prompt, sans-serif;
     /* border: 2px groove green; */
 }
-.index-all {
+/* .index-all {
     display: flex;
     flex-direction: column;
     background: rgb(255, 210, 218);
-}
+} */
 a {
     text-decoration: solid;
     color:rgb(216, 65, 90);
     font-weight: bolder;
 }
-.hero-section{
+/* .hero-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +25,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 header {
     margin-bottom: 30px;
@@ -46,7 +46,7 @@ header {
     padding: 10px 10px;
     color: rgb(216, 65, 90);
 }
-.hero {
+/* .hero {
     align-items: center;
     font-size: 50px;
     max-width: 1800px;
@@ -57,7 +57,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     width: 90%;
-}
+} */
 .hero h1{
     width: 80%;
     margin: 0 auto;
@@ -66,8 +66,8 @@ header {
 }
 
 .index-body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: 10px 10px;
     padding: 10px 10px;
     /* background: white; */
@@ -172,4 +172,12 @@ label {
 }
 .index-foot a:hover {
     color: palegreen;
+}
+
+main {
+    height: 72vh;
+}
+
+.faq {
+    background-image: #;
 }
