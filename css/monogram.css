@@ -104,15 +104,33 @@ nav a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    /* border: 2px solid black; */
+    position: relative;
+    cursor: pointer;
 }
 
 .product img {
-    /* width: 100%;
-    height: 35vh; */
-    /* display: inline-block; */
     aspect-ratio: 1/1;
 }
+.pre-order-btn, 
+.shop-btn {
+    text-transform: uppercase;
+    padding: .4rem .7rem;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+.pre-order-btn {
+    background-color: #ff8b68;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.shop-btn {
+    background-color: #1a2456;
+    color: #fff;
+    border-radius: 20px;
+    display: none;
+} 
 
 .item {
     margin: .5em 0;
@@ -195,3 +213,4 @@ input {
     height: 25px;
     margin: 5px auto;
 }
+
