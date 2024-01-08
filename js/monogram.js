@@ -5,20 +5,20 @@ const shopBtnList = document.querySelectorAll('.shop-btn')
 
 
 productList.forEach(product => {
-    product,addEventListener('mouseover', () => {
+    product.addEventListener('mouseOver', () => {
         let index = parseInt(product.id)
-        shopBtnList[index].style.display='block'
-        priceList[index].style.display='none'
+        shopBtnList[index].computedStyleMap.display='block'
+        priceList[index].computedStyleMap.display='none'
         // imageList[index].src = ''
 
     })
 });
 
 productList.forEach(product => {
-    product,addEventListener('mouseout', () => {
+    product.addEventListener('mouseOut', () => {
         let index = parseInt(product.id)
-        shopBtnList[index].style.display='none'
-        priceList[index].style.display='block'
+        shopBtnList[index].computedStyleMap.display='none'
+        priceList[index].computedStyleMap.display='block'
         // imageList[index].src = ''
 
     })

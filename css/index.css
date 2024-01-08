@@ -200,7 +200,7 @@ main {
     width: 40%;
     align-items: center;
     background-color: beige;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     border-radius: 10px;
     position: absolute;
     top: 300px; left: 30%;
@@ -221,10 +221,12 @@ main {
 
 .fa-circle-plus {
     color: #cc29db;
+    display: flex;
 }
 
-.fa-circle-minus {
+.expand-buttons .fa-circle-minus {
     color: rgb(26, 13, 48);
+    display: none;
 }
 
 .faq p {
@@ -232,8 +234,10 @@ main {
     padding-top: 5px;
     padding-bottom: 5px;
     color: grey;
+    display: none;
 }
 .expand-buttons {
     font-size: 24px;
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
 }
