@@ -76,19 +76,19 @@ header {
     background: white;
 }
 
-.links-to-projects {
+/* .links-to-projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 10px 10px;
-    /* width: 400px; */
-    /* height: 400px; */
+    /* width: 400px; 
+    /* height: 400px;
     background: white;
     border: 10px solid rgb(253, 152, 169);
     border-radius: 20px;
-}
+} */
 
 
 .links-to-projects a {
@@ -130,23 +130,24 @@ header {
 
 .nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.nav a:hover {
+.nav a, .nav i:hover {
     background: white;
     color: rgb(216, 65, 90);
     border: 0px solid rgb(253, 152, 169);
     border-radius: 10px;
 }
-.nav a {
+.nav a, .nav i {
     display: flex;
     padding: 10px 10px;
     text-decoration: solid;
     background: rgb(253, 152, 169);
     color: rgb(216, 65, 90);
     /* border: 10px solid rgb(253, 152, 169); */
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 /* main {
@@ -240,4 +241,38 @@ main {
     font-size: 24px;
     /* display: flex;
     justify-content: space-between; */
+}
+
+
+@media (max-width: 1020px) {
+    .fa-caret-up {
+    display: flex;
+}
+.drop-buttons .fa-caret-down {
+    display: none;
+}
+.menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; right: 10vw;
+    background: rgb(253, 152, 169);
+    border-radius: 10px;
+}
+}
+@media (min-width: 1020px) {
+    .drop-buttons .fa-caret-up {
+    display: none;
+}
+.drop-buttons .fa-caret-down {
+    display: none;
+}
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    /* top: 70px; right: 10vw; */
+    /* background: rgb(253, 152, 169); */
+    /* border-radius: 10px; */
+}
 }
