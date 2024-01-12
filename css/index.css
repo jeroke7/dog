@@ -46,6 +46,8 @@ header {
     padding: 10px 10px;
     color: rgb(216, 65, 90);
 }
+
+
 /* .hero {
     align-items: center;
     font-size: 50px;
@@ -219,7 +221,9 @@ main {
     padding-top: 15px;
     justify-content: space-between;
 }
-
+.box {
+    width: 100%;
+}
 .fa-circle-plus {
     color: #cc29db;
     display: flex;
@@ -243,6 +247,11 @@ main {
     justify-content: space-between; */
 }
 
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
 
 @media (max-width: 1020px) {
     .fa-caret-up {
@@ -259,20 +268,25 @@ main {
     background: rgb(253, 152, 169);
     border-radius: 10px;
 }
+.menu-items2 {
+    display: none;
 }
+}
+
+
 @media (min-width: 1020px) {
-    .drop-buttons .fa-caret-up {
-    display: none;
-}
-.drop-buttons .fa-caret-down {
-    display: none;
-}
-.menu-items {
+    .menu-items2 {
     display: flex;
     flex-direction: row;
-    /* position: absolute; */
-    /* top: 70px; right: 10vw; */
-    /* background: rgb(253, 152, 169); */
-    /* border-radius: 10px; */
 }
+    .drop-buttons {
+    display: none;
 }
+.nav .menu-items a{
+        color: red;
+        border: solid 2px red;
+        display: none;
+    }
+
+}
+
