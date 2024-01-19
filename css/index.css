@@ -182,13 +182,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgb(245, 152, 253);
+    /* background-color:rgb(245, 152, 253); */
 }
 
 .faq {
     width: 70%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(26, 13, 48);
+    background-color:rgb(245, 152, 253);
 }
 .faq h2 img {
     height: 24px;
@@ -205,8 +206,8 @@ main {
     background-color: beige;
     /* border: 2px black solid; */
     border-radius: 10px;
-    position: absolute;
-    top: 300px; left: 30%;
+    position: relative;
+    bottom: 10%; left: 30%;
 }
 .faq-body h2 {
     font-size: 30px;
@@ -290,3 +291,92 @@ main {
 
 }
 
+.supervisor-block, .karma-block, .calculator-block, .teambuilder-block {
+    background-color: white;
+    /* border: 2px red solid; */
+    filter: drop-shadow(0px 5px 3px gray);
+    border-radius: 5px;
+    width: 300px;
+    height: 175px;
+    text-align: left;
+    padding: 10px 10px;
+    margin: 5px 10px;
+}
+
+.fourcard h2, .fourcard p {
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+.fourcard h3 {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
+.fcheading h2 {
+    font-size: 30px;
+    width: 100%;
+}
+.fcheading p {
+    font-size: 14px;
+    width: 100%;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 32px;
+}
+.supervisor-block {
+    border-top: solid 5px #45d3d3;
+}
+.karma-block {
+    border-top: solid 5px #fcaf4a;
+}
+.calculator-block {
+    border-top: solid 5px #549ef2;
+}
+.teambuilder-block {
+    border-top: solid 5px #ea5353;
+}
+
+.fourcard img {
+    position: relative;
+    top: 10%; left: 75%
+}
+
+@media (max-width: 1020px) {
+    .fourcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 40%;
+    }
+    .fcheading {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1020px) {
+    .fourcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fcblocks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .middle-blocks {
+        display: flex;
+        flex-direction: column;
+    }
+    .fcheading {
+        /* width: 70%; */
+        text-align: center;
+    }
+}
