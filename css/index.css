@@ -28,7 +28,7 @@ a {
 } */
 
 header {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,6 +37,7 @@ header {
     background:rgb(253, 152, 169);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     width: 90%;
+    margin: 0 auto;
 }
 .header-left {
     display: flex;
@@ -190,6 +191,7 @@ main {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(26, 13, 48);
     background-color:rgb(245, 152, 253);
+    margin-bottom: 100px;
 }
 .faq h2 img {
     height: 24px;
@@ -356,6 +358,9 @@ main {
     .fcheading {
         width: 90%;
     }
+    .teambuilder-block {
+        margin-bottom: 100px;
+    }
 }
 
 @media (min-width: 1020px) {
@@ -379,4 +384,78 @@ main {
         /* width: 70%; */
         text-align: center;
     }
+    .calculator-block {
+        margin-bottom: 100px;
+    }
+}
+
+:root {
+    --primary-red: hsl(0,100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-blue: hsl(249, 10%, 26%);
+    --neutral-gray: hsl(246, 25%, 77%);
+}
+.signup {
+    font-size: 1rem;
+    background-color: var(--primary-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 400px;
+}
+.signup-heading {
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 80%;
+}
+.signup-heading h1 {
+    font-weight: 700;
+    /* border: 2px solid red; */
+}
+.signup-content {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup-content button {
+    background-color: var(--accent-blue);
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.signup-content .claim{
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    width: 80%;
+}
+.signup-inputs {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+.signup-inputs input{
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid var(--neutral-gray);
+    color: var(--nautral-gray);
+    border-radius: 5px;
 }
