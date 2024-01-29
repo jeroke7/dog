@@ -6,26 +6,11 @@
     font-family: prompt, sans-serif;
     /* border: 2px groove green; */
 }
-/* .index-all {
-    display: flex;
-    flex-direction: column;
-    background: rgb(255, 210, 218);
-} */
 a {
     text-decoration: solid;
-    color:rgb(216, 65, 90);
+    color: rgb(80, 80, 80);
     font-weight: bolder;
 }
-/* .hero-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 5em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
 header {
     /* margin-bottom: 30px; */
@@ -34,7 +19,7 @@ header {
     justify-content: space-between;
     padding: 10px 10px;
     border-radius: 20px;
-    background:rgb(253, 152, 169);
+    background:gray;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     width: 90%;
     margin: 0 auto;
@@ -45,27 +30,16 @@ header {
     align-items: center;
     text-align: center;
     padding: 10px 10px;
-    color: rgb(216, 65, 90);
+    color: rgb(80, 80, 80);
 }
 
 
-/* .hero {
-    align-items: center;
-    font-size: 50px;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 200px;
-    background-image: url(../img/abletonvid.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 90%;
-} */
+
 .hero h1{
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    color: rgb(216, 65, 90);
+    color: rgb(80, 80, 80);
 }
 
 .index-body {
@@ -74,46 +48,15 @@ header {
     margin: 10px 10px;
     padding: 10px 10px;
     /* background: white; */
-    border: 10px solid rgb(253, 152, 169);
+    border: 10px solid gray;
     border-radius: 20px;
     background: white;
-}
-
-/* .links-to-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 10px 10px;
-    /* width: 400px; 
-    /* height: 400px;
-    background: white;
-    border: 10px solid rgb(253, 152, 169);
-    border-radius: 20px;
-} */
-
-
-.links-to-projects a {
-    border: 10px solid rgb(253, 152, 169);
-    border-radius: 20px;
-    padding: 5px;
-    /* height: 200px; */
-    /* width: 200px; */
-    text-align: center;
-    margin: 5px 5px;
-    /* padding-top: 150px; */
-}
-.row1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .row2 {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .item {
     display: flex;
@@ -139,7 +82,7 @@ header {
 }
 .nav a, .nav i:hover {
     background: white;
-    color: rgb(216, 65, 90);
+    color: rgb(80, 80, 80);
     border: 0px solid rgb(253, 152, 169);
     border-radius: 10px;
 }
@@ -268,7 +211,7 @@ main {
     flex-direction: column;
     position: absolute;
     top: 70px; right: 10vw;
-    background: rgb(253, 152, 169);
+    background: gray;
     border-radius: 10px;
 }
 .menu-items2 {
@@ -415,9 +358,7 @@ main {
     padding-top: 50px;
     padding-bottom: 50px;
     /* border: 2px solid red; */
-    width: 40%;
-
-
+    width: 60%;
 }
 .signup-heading h1 {
     margin-bottom: 20px;
@@ -434,9 +375,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    /* width: 100%; */
-    
+    width: 60%;    
 }
 .signup-content button {
     background-color: var(--accent-blue);
@@ -451,6 +390,7 @@ main {
     filter: drop-shadow(0px 5px 0px hsl(0, 81%, 65%));
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    /* border: 2px groove red; */
 }
 .signup-bold {
     font-weight: 700;
@@ -464,9 +404,10 @@ main {
     background-color: var(--primary-green);
     border-bottom: 3px solid hsl(154, 72%, 33%);
     border-radius: 5px;
-    margin: 10px 0;
-    margin-bottom: 0;
+    /* margin: 10px 0; */
+    /* margin-bottom: 0; */
     width: 75%;
+    padding: 20px 30px;
     filter: none;
     text-transform: uppercase;
     font-weight: 500;
@@ -489,13 +430,16 @@ main {
     border: 3px solid var(--neutral-gray);
     color: var(--nautral-gray);
     border-radius: 5px;
+    /* border: 2px groove red; */
 }
 .signup-inputs a {
     color: gray;
     padding: 30px 0;
     font-size: 11px;
 }
-
+button:hover {
+    cursor: pointer;
+}
 @media (min-width: 1020px) {
     .signup {
         width: 100%;
@@ -507,8 +451,16 @@ main {
     }
     .signup-content {
         margin-left: 20px;
+        /* margin-right: 20px; */
+        width: 40%;
     }
     .signup-heading {
         margin-right: 20px;
+        width: 40%;
+    }
+    .signup-content .claim{  
+        margin: 10px 0;
+        margin-bottom: 0;
+        width: 75%;
     }
 }
