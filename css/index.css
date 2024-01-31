@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     /* font-size: 32px; */
     margin: 0;
     padding: 0;
@@ -32,7 +32,6 @@ header {
     padding: 10px 10px;
     color: rgb(80, 80, 80);
 }
-
 
 
 .hero h1{
@@ -83,7 +82,7 @@ header {
 .nav a, .nav i:hover {
     background: white;
     color: rgb(80, 80, 80);
-    border: 0px solid rgb(253, 152, 169);
+    border: 0px solid rgb(80, 80, 80);
     border-radius: 10px;
 }
 .nav a, .nav i {
@@ -396,7 +395,7 @@ main {
     font-weight: 700;
 }
 .signup-content input {
-    width: 70%;
+    width: 75%;
     /* padding-left: 20px; */
     font-family: 'Poppins', sans-serif;
 }
