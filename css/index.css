@@ -89,8 +89,8 @@ header {
     display: flex;
     padding: 10px 10px;
     text-decoration: solid;
-    background: rgb(253, 152, 169);
-    color: rgb(216, 65, 90);
+    background: gray;
+    color: rgb(80, 80, 80);
     /* border: 10px solid rgb(253, 152, 169); */
     border-radius: 10px;
 }
