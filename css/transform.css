@@ -37,6 +37,15 @@
     
     .box3 {
     background-color: yellow;
+    animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      from {
+        background-color: yellow;
+      }
+      to {
+        background-color: blue;
+      }
     }
     
     .box4 {
@@ -177,3 +186,33 @@ div#main:hover .bottomright {
       transform: rotate(360deg);
     }
   } */
+
+.hello-world {
+  background: linear-gradient(purple, magenta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+}
+.bubble {
+  background: white;
+  padding: 30px;
+  border-radius: 50px;
+}
+.waving {
+  animation: waving 1s linear alternate infinite;
+  /* transform: rotate(0deg); */
+  border: 2px red solid;
+  background-color: green;
+}
+
+@keyframes waving {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+    /* background-color: green; */
+  }
+}
