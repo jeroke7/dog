@@ -15,38 +15,38 @@
     margin: 1rem 0;
     }
     
-    .box1 {
+    /* .box1 {
     background-color: red;
     transition: width 1s ease-in-out;
         
-    }
+    } */
 
-    .box1:hover {
+    /* .box1:hover {
         width: 200px;
-    }
+    } */
 
-    .box1:hover + .box2{
+    /* .box1:hover + .box2{
         width: 200px;
-    }
+    } */
 
-    
+/*     
     .box2 {
     background-color: green;
     transition: width 1s ease-in-out .5s;
-    }
+    } */
     
-    .box3 {
+    /* .box3 {
     background-color: yellow;
-    animation: pulse 3s ease-in-out infinite;
-    }
-    @keyframes pulse {
+    /* animation: pulse 3s ease-in-out infinite; 
+    } */
+    /* @keyframes pulse {
       from {
         background-color: yellow;
       }
       to {
         background-color: blue;
       }
-    }
+    } */
     
     .box4 {
     background-color: blue;
@@ -187,6 +187,7 @@ div#main:hover .bottomright {
     }
   } */
 
+
 .hello-world {
   background: linear-gradient(purple, magenta);
   display: flex;
@@ -195,24 +196,68 @@ div#main:hover .bottomright {
   height: 200px;
   width: 300px;
 }
+
 .bubble {
   background: white;
-  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 50px;
-}
-.waving {
-  animation: waving 1s linear alternate infinite;
-  /* transform: rotate(0deg); */
-  border: 2px red solid;
-  background-color: green;
+  padding: 30px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: expand 1s ease-in-out;
 }
 
-@keyframes waving {
-  from {
+h1 {
+  display: block;
+  width: 300px;
+  /* border: red 2px solid; */
+  animation: textexpand 2s ease-in;
+}
+
+.waving {
+  display: block;
+  /* border: 25px red solid; */
+  /* background-color: green; */
+  animation: textexpand 2s ease-in;
+  animation: wave .5s cubic-bezier(1,.02,.54,.99) alternate infinite;
+  font-size: 30px;
+  margin-left: 1.5rem;
+  
+}
+
+@keyframes expand {
+  0% {
+    width: 50px;
+    opacity: 0;
+  }
+  50% {
+    width: 125%;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes textexpand {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wave {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(90deg);
-    /* background-color: green; */
+  100% {
+    transform: translate(-20px) rotate(-45deg);
+    /* background-color: green;  */
   }
 }
