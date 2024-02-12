@@ -1,21 +1,51 @@
+* {
+    /* border: 2px red groove; */
+}
 body {
-    font-family: Verdana;
-    /* width, if percent, is relative to its parent/container */
-    /* margin: 0 auto; */ 
-    background-color: maroon;
+    display: flex;
+    flex-direction: column;
 }
-.main {
-    background: white;
-    border: 2px dashed blue;
-    margin: 4px
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.title {
-    text-align: center;
+.snap {
+    font-size: 40px;
 }
-.p1 {
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* color: grey; */
+}
+.dropdown {
+    color: grey;
+}
+.dropdown:hover {
+    color: black;
+}
+.dropitm {
+    color: grey;
+}
+.dropitm:hover {
+    color: black;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: left;
+    width: 40%;
 }
 img {
-    border: dotted;
-    justify-content: center;
+    width: 40%;
 }
