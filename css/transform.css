@@ -194,7 +194,7 @@ div#main:hover .bottomright {
   justify-content: center;
   align-items: center;
   height: 200px;
-  width: 300px;
+  width: 400px;
 }
 
 .bubble {
@@ -202,7 +202,7 @@ div#main:hover .bottomright {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 50px;
   padding: 30px;
-  width: 100%;
+  width: 300px;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -221,8 +221,8 @@ h1 {
   display: block;
   /* border: 25px red solid; */
   /* background-color: green; */
-  animation: textexpand 2s ease-in;
-  animation: wave .5s cubic-bezier(1,.02,.54,.99) alternate infinite;
+  animation: wave 1s cubic-bezier(1,.02,.54,.99) alternate infinite 1.5s;
+  /* animation: textexpand 2s ease-in; */
   font-size: 30px;
   margin-left: 1.5rem;
   
@@ -234,13 +234,30 @@ h1 {
     opacity: 0;
   }
   50% {
-    width: 125%;
+    width: 400px;
+    /* opacity: 0; */
   }
   100% {
-    width: 100%;
+    width: 300px;
     opacity: 1;
   }
 }
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+    /* opacity: 0; */
+  }
+  50% {
+    /* opacity: 0; */
+  }
+  100% {
+    transform: translate(-20px) rotate(-45deg);
+    /* opacity: 1; */
+    /* background-color: green;  */
+  }
+}
+
 @keyframes textexpand {
   0% {
     opacity: 0;
@@ -250,14 +267,5 @@ h1 {
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translate(-20px) rotate(-45deg);
-    /* background-color: green;  */
   }
 }
