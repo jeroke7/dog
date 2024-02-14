@@ -1,28 +1,50 @@
 * {
-    /* border: 2px red groove; */
+    /* border: 3px skyblue inset; */
+    box-sizing: border-box;
 }
 body {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
 }
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.snap-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .snap {
     font-size: 40px;
+    margin: 10px;
 }
 .menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* color: grey; */
+    justify-content: space-between;
+    align-items: top;
+    margin: 10px;
 }
+
 .dropdown {
+    display: flex;
+    flex-direction: column;
     color: grey;
+    padding: 10px;
+    position: relative;
+}
+a {
+    padding-left: 5px;
+    margin-top: 5px;
 }
 .dropdown:hover {
     color: black;
@@ -32,7 +54,65 @@ body {
 }
 .dropitm:hover {
     color: black;
+    cursor:default;
 }
+.page {
+    padding: 10px;
+    color: grey;
+}
+.page:hover {
+    color: black;
+}
+.login {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: none;
+    padding: 10px;
+}
+.register {
+    border: 1px black solid;
+    border-radius: 10px;
+}
+.learn-more {
+    border: none;
+    background: black;
+    border-radius: 10px;
+    color: white;
+}
+
+i {
+    margin-right: 5px;
+}
+.todo {
+    color: purple;
+}
+.calendar {
+    color: turquoise;
+}
+.reminders {
+    color: orange;
+}
+.planning {
+    color: magenta;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+}
+h2 .fa-angle-down {
+    display: flex;
+    margin-left: 5px;
+}
+h2 .fa-angle-up {
+    display: none;
+    margin-left: 5px;
+}
+
 .hero {
     display: flex;
     flex-direction: row;
