@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     /* justify-content: center; */
 }
-
 .header {
     display: flex;
     flex-direction: row;
@@ -17,22 +16,23 @@ body {
     margin: 10px;
     padding: 10px;
 }
-
-.snap-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .snap {
     font-size: 40px;
     margin: 10px;
 }
-.menu {
+
+@media (min-width: 1020px) {
+    .header-left2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: top;
-    margin: 10px;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: top; */
+    /* margin: 10px; */
 }
 
 .dropdown {
@@ -46,23 +46,38 @@ a {
     padding-left: 5px;
     margin-top: 5px;
 }
-.dropdown:hover {
-    color: black;
-}
-.dropitm {
+.dropitms {
+    display: flex;
+    flex-direction: column;
     color: grey;
 }
-.dropitm:hover {
-    color: black;
-    cursor:default;
+.dropitms2 {
+    display: none;
 }
 .page {
     padding: 10px;
     color: grey;
 }
-.page:hover {
+/* .page:hover {
     color: black;
+} */
+/* .dropdown:hover {
+    color: black;
+} */
+/* .dropitm:hover {
+    color: black;
+    cursor:default;
+} */
 }
+@media (max-width: 1020px) {
+    .dropitms2 {
+        display: none;
+    }
+}
+
+
+
+
 .login {
     padding: 10px;
     display: flex;
@@ -104,15 +119,19 @@ h2 {
     display: flex;
     align-items: center;
 }
-h2 .fa-angle-down {
-    display: flex;
-    margin-left: 5px;
-}
-h2 .fa-angle-up {
+.dropbtns .fa-angle-down {
     display: none;
     margin-left: 5px;
 }
-
+.dropbtns .fa-angle-up {
+    display: flex;
+    margin-left: 5px;
+}
+.dropbtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .hero {
     display: flex;
     flex-direction: row;
