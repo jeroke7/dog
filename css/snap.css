@@ -21,7 +21,7 @@ body {
         height: 100px;
         margin: 10px;
         padding: 10px;
-        border: 1px green solid;
+        /* border: 1px green solid; */
     }
     .header-left2 {
         width: 90%;
@@ -35,14 +35,19 @@ body {
         flex-direction: column;
         background: white;
         position: absolute;
-        top: 120px;
+        top: 0px;
         right: 0px;
         width: 50%;
     }
     #close {
         display: none;
+        justify-content: right;
+        font-size: 30px;
+        font-weight: 200;
         padding: 20px;
         cursor: pointer;
+        position: relative;
+        top: 25px; right: 55px;
     }
     #open {
         cursor: pointer;
@@ -91,6 +96,16 @@ body {
     .login .register {
         border: 1px solid black;
         border-radius: 10px;
+    }
+    .fade {
+        display: none;
+        width: 50%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+        position: absolute;
+        top: 0px; left: 0px;
+        /* border: solid green 2px; */
     }
     /* .menu .fa-bars {
         display: none;
