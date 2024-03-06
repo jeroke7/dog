@@ -13,6 +13,27 @@ body {
     margin: 10px;
 }
 
+.todo {
+    color: rgb(113, 84, 243);
+}
+.calendar {
+    color: rgb(84, 206, 243);
+}
+.reminders {
+    color: rgb(243, 219, 84);
+}
+.planning {
+    color: rgb(185, 84, 243);
+}
+a {
+    margin-top: 10px;
+    /* font-weight: 200; */
+}
+a:hover {
+    cursor: pointer;
+    color: black;
+}
+
 @media (max-width: 1020px) {
     .header {
         display: flex;
@@ -42,9 +63,9 @@ body {
     #close {
         display: none;
         justify-content: right;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 200;
-        padding: 20px;
+        margin: 20px;
         cursor: pointer;
         position: relative;
         top: 25px; right: 55px;
@@ -53,13 +74,19 @@ body {
         cursor: pointer;
         font-size: 30px;
     }
-    .dropitms {
+    .dropitms, .dropitms2 {
         display: none;
-        padding: 10px;
+        flex-direction: column;
+        margin-left: 20%;
+        padding-bottom: 10px;
+        padding-left: 10px;
     }
-    .dropitms2 {
-        display: none;
+    .todo, .calendar, .reminders, .planning {
+        padding-right: 10px;
     }
+
+
+
     .dropbtns {
         display: flex;
         align-items: center;
@@ -105,36 +132,51 @@ body {
         opacity: 0.5;
         position: absolute;
         top: 0px; left: 0px;
-        /* border: solid green 2px; */
     }
-    /* .menu .fa-bars {
-        display: none;
-    } */
-    
 }
-/* @media (min-width: 1020px) {
-    .header-left2 .fa-bars {
-        display: none;
+@media (min-width: 1020px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        /* height: 100px; */
+        margin: 10px;
+        padding: 10px;
+        /* border: 1px green solid; */
     }
     .header-left2 {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
     .menu {
         display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        /* border: green solid 1px; */
+        align-items: center;
     }
-    .dropitms {
-        display: none;
-        padding: 10px;
+    .dropdown {
+        margin-left: 20px;
     }
-    .dropitms2 {
-        display: none;
+    .page {
+        margin-left: 20px;
     }
+
+    .todo, .calendar, .reminders, .planning {
+        padding-right: 10px;
+    }
+
+
     .dropbtns {
         display: flex;
         align-items: center;
     }
     .dropbtns h2 {
+        padding: 10px;
+        margin-left: 20%;
         font-size: 20px;
         font-weight: 200;
     }
@@ -142,24 +184,51 @@ body {
         display: none;
     }
     .page {
+        padding: 10px;
+        /* margin-left: 20%; */
         font-size: 20px;
         font-weight: 200;
     }
     .login {
+        padding: 10px;
         display: flex;
         flex-direction: row;
+        width: 60%;
+        margin-left: 20%;
         justify-content: center;
     }
-    .menu .fa-x {
+    .login button {
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 200;
+        height: 30px;
+    }
+    .login .register {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 30px;
+        align-items: center;
+    }
+    .dropitms, .dropitms2 {
         display: none;
+        flex-direction: column;
+        position: absolute;
     }
     .dropitms {
-        display: none;
+        position: absolute;
+        top: 120px; left: 120px;
     }
     .dropitms2 {
-        display: none;
+        position: absolute;
+        top:120px;  left: 120px;
     }
-} */
+}
+
+
 /* .dropdown {
     display: flex;
     flex-direction: column;
