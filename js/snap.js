@@ -8,6 +8,11 @@ const angle2Close = document.getElementById('2')
 const angle2Open = document.getElementById('3')
 const dropItemList = document.querySelector('.dropitms')
 const dropItem2List = document.querySelector('.dropitms2')
+// const url = 'https://dad-jokes-by-api-ninjas.p.rapidapi.com/v1/dadjokes';
+// const theJoke = document.querySelector(".output")
+// const jokeBtn = document.querySelector(".button")
+const url = 'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid={API key}'
+
 
 //small screen open/close menu
 openBtn.addEventListener('click', () => {
@@ -46,3 +51,27 @@ angle2Close.addEventListener('click', () => {
     dropItem2List.style.display = 'none'
     angle2Open.style.display = 'flex'
 })
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '28231aa002msh0caf208841296acp10c840jsn6380e8dff558',
+		'X-RapidAPI-Host': 'dad-jokes-by-api-ninjas.p.rapidapi.com'
+	}
+};
+async function getJoke() {
+    try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	// console.log(result[0]);
+    const joke = result[0].joke;
+    theJoke.textContent = joke
+} catch (error) {
+	// console.error(error);
+    theJoke.textContent = "something went awry"
+}}
+
+jokeBtn.addEventListener('click', () => {
+    getJoke()
+})
+getJoke()

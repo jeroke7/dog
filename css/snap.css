@@ -194,7 +194,7 @@ a:hover {
         display: flex;
         flex-direction: row;
         width: 60%;
-        margin-left: 20%;
+        margin-right: 10%;
         justify-content: center;
     }
     .login button {
