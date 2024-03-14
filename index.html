@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 </head>
-<body class="index-all">
+<body>
     <div class="hero-section">
         <header>
             <div class="header-left">
@@ -48,10 +48,18 @@
             </div>
         </header>
         <main>
-            <div class="box box1">1</div>
-            <div class="box box2">2</div>
-            <div class="box box3">3</div>
-            <div class="box box4">4</div>
+            <div class="weather">
+                <div class="context">
+                    <p class="city">Portland, ME</p>
+                    <p class="current-time">00:00</p>
+                    <p class="current-date">00/00/0000</p>
+                </div>
+                <img class="weather-icon" alt="weather-icon" src="img/partly-cloudy.png"></img>
+                <div class="info">
+                    <p> <span class="temp">0</span>°F</p>
+                    <p class="condition"></p>
+                </div>
+            </div>
             <div class="fourcard">
                 <div class="fcheading">
                     <h2>Reliable, efficient delivery <br><span class="bold">Powered by Technology</span></h2>
@@ -131,7 +139,8 @@
             <div class="signup">
                 <div class="signup-heading">
                     <h1>Learn to code by <br>watching others</h1>
-                    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+                    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                    but understanding how developers think is invaluable.</p>
                 </div>
                 <div class="signup-content">
                     <button type="button"><span class="signup-bold">Try it free 7 days</span> then $20/mo. thereafter</button>

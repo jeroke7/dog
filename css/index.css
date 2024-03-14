@@ -34,6 +34,43 @@ header {
 }
 
 
+.weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    position: absolute;
+    top: 90px; left: 5%;
+    padding: 10px;
+    background: linear-gradient(rgba(240, 248, 255, .5), rgba(135, 206, 235, .7), rgba(240, 248, 255, .5));
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 255, .5))
+}
+.weather p {
+    margin-top: 5px;
+    color: rgba(61, 144, 252, .8);
+    font-weight: bold;
+}
+.city, .current-date {
+    font-size: 12px;
+}
+.current-time {
+    font-size: 30px;
+}
+.weather-icon {
+    height: 70px;
+    margin: 10px;
+}
+.info {
+    text-align: right;
+}
+.temp {
+    font-size: 20px;
+}
+
+
 .hero h1{
     width: 80%;
     margin: 0 auto;

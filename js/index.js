@@ -6,6 +6,46 @@ const upCaretList = document.querySelectorAll('.fa-caret-up')
 const downCaretList = document.querySelectorAll('.fa-caret-down')
 const dropItemList = document.querySelectorAll('.menu-items')
 
+const city = document.querySelector('.city')
+const currentTime = document.querySelector('.current-time')
+const currentDate = document.querySelector('.current-date')
+const weatherIcon = document.querySelector('.weather-icon')
+const temp = document.querySelector('.temp')
+const condition = document.querySelector('.condition')
+
+city.textContent = "Portland, ME"
+weatherIcon.src = "./img/snow.png"
+temp.textContent = "60"
+condition.textContent = "Snowy"
+
+const dateObject = new Date()
+const month = dateObject.getMonth() + 1
+const date = dateObject.getDate()
+const year = dateObject.getFullYear()
+let hour = dateObject.getHours()
+let minutes = dateObject.getMinutes()
+let amPm = 'am'
+
+
+if (minutes < 10) {
+    minutes = '0' + minutes.toString()
+}
+if (hour >= 12) {
+    amPm = 'pm'
+}
+if (hour > 12) {
+    amPm = 'pm'
+    hour = hour - 12
+}
+
+
+let time = `${hour}:${minutes}${amPm}`
+console.log(month, date, year, time)
+currentTime.textContent = time
+
+
+
+
 
 minusButtonList.forEach(minus => {
     minus.addEventListener('click', () => {
@@ -41,3 +81,4 @@ upCaretList.forEach(up => {
         dropItemList[caret].style.display='flex'
     })
 })
+
