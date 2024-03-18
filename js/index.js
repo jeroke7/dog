@@ -10,13 +10,17 @@ const city = document.querySelector('.city')
 const currentTime = document.querySelector('.current-time')
 const currentDate = document.querySelector('.current-date')
 const weatherIcon = document.querySelector('.weather-icon')
-const temp = document.querySelector('.temp')
-const condition = document.querySelector('.condition')
+const currentTemp = document.querySelector('.temp')
+const currentCondition = document.querySelector('.condition')
+const key = "cdff56cef44705e034e085d9d601894f"
+
+// const currentYr = document.querySelector('.current-year')
+// currentYr.textContent = year
 
 city.textContent = "Portland, ME"
-weatherIcon.src = "./img/snow.png"
-temp.textContent = "60"
-condition.textContent = "Snowy"
+// weatherIcon.src = "./img/snow.png"
+currentTemp.textContent = "60"
+currentCondition.textContent = "Snowy"
 
 const dateObject = new Date()
 const month = dateObject.getMonth() + 1
@@ -42,6 +46,57 @@ if (hour > 12) {
 let time = `${hour}:${minutes}${amPm}`
 console.log(month, date, year, time)
 currentTime.textContent = time
+currentDate.textContent = `${month}/${date}/${year}`
+
+
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
+const rain = ['shower rain', 'rain', 'mist']
+
+let lat = 43.6391
+let lon = -70.2568
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`
+
+
+async function getWeather() {
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+        currentTemp.textContent = Math.round(data.main.temp)
+        let condition = data.weather[0].description
+        console.log(condition)
+        currentCondition.textContent = condition
+        
+        if (clouds.includes(condition)) {
+            let img = 'partly-cloudy.png'
+        } else if (rain.includes(condition)) {
+            img = 'rain.png'
+        } else if (condition == 'thunderstorm') {
+            img = 'rain-storm.png'
+        } else if (condition == 'snow') {
+            img = 'snow.png'
+        } else if (condition == 'clear sky') {
+            img = 'sunny.png'
+        } 
+
+        weatherIcon.src = `../img/weatherIcon/${img}`
+
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+getWeather()
+
+
+
+
+
+
+
+
+
+
+
 
 
 

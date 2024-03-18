@@ -39,7 +39,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
+    width: 300px;
     position: absolute;
     top: 90px; left: 5%;
     padding: 10px;
@@ -323,7 +323,7 @@ main {
 
 .fourcard img {
     position: relative;
-    top: 10%; left: 75%
+    bottom: 10%; left: 75%
 }
 
 @media (max-width: 1020px) {
