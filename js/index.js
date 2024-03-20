@@ -47,15 +47,15 @@ let time = `${hour}:${minutes}${amPm}`
 console.log(month, date, year, time)
 currentTime.textContent = time
 currentDate.textContent = `${month}/${date}/${year}`
+// let location = `${city},${state}`
 
-
-const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds', 'overcast clouds']
 const rain = ['shower rain', 'rain', 'mist']
 
-let lat = 43.6391
-let lon = -70.2568
+let lat = 43.6342
+let lon = -70.2816
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`
-
+let img 
 
 async function getWeather() {
     try {
@@ -67,7 +67,7 @@ async function getWeather() {
         currentCondition.textContent = condition
         
         if (clouds.includes(condition)) {
-            let img = 'partly-cloudy.png'
+            img = 'partly-cloudy.png'
         } else if (rain.includes(condition)) {
             img = 'rain.png'
         } else if (condition == 'thunderstorm') {
@@ -87,9 +87,16 @@ async function getWeather() {
 }
 getWeather()
 
+//  var requestOptions = {
+//      method: 'GET',
+//    };
+  
+//    fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=26568068ee174eaa9ad6a61ffacba666", requestOptions)
+//      .then(response => response.json())
+//      .then(result => console.log(result))
+//      .catch(error => console.log('error', error));
 
-
-
+// let url = `https://api.geoapify.com/v1/ipinfo?&apiKey=26568068ee174eaa9ad6a61ffacba666&lat=${lat}&lon=${lon}&loc`
 
 
 
