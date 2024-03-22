@@ -53,7 +53,7 @@ header {
     color: rgba(61, 144, 252, .8);
     font-weight: bold;
 }
-.city, .current-date {
+.current-location, .current-date {
     font-size: 12px;
 }
 .current-time {

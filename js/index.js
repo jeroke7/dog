@@ -1,3 +1,5 @@
+const key = 'cdff56cef44705e034e085d9d601894f'
+const ipKey = '26568068ee174eaa9ad6a61ffacba666'
 const minusButtonList = document.querySelectorAll('.fa-circle-minus')
 const plusButtonList = document.querySelectorAll('.fa-circle-plus')
 const paragraphList = document.querySelectorAll('.faq-paragraph')
@@ -6,29 +8,34 @@ const upCaretList = document.querySelectorAll('.fa-caret-up')
 const downCaretList = document.querySelectorAll('.fa-caret-down')
 const dropItemList = document.querySelectorAll('.menu-items')
 
-const city = document.querySelector('.city')
+const currentLocation = document.querySelector('.current-location')
 const currentTime = document.querySelector('.current-time')
 const currentDate = document.querySelector('.current-date')
 const weatherIcon = document.querySelector('.weather-icon')
 const currentTemp = document.querySelector('.temp')
 const currentCondition = document.querySelector('.condition')
-const key = "cdff56cef44705e034e085d9d601894f"
 
-// const currentYr = document.querySelector('.current-year')
-// currentYr.textContent = year
 
-city.textContent = "Portland, ME"
 // weatherIcon.src = "./img/snow.png"
 currentTemp.textContent = "60"
 currentCondition.textContent = "Snowy"
 
 const dateObject = new Date()
-const month = dateObject.getMonth() + 1
-const date = dateObject.getDate()
-const year = dateObject.getFullYear()
+let month = dateObject.getMonth() + 1
+let date = dateObject.getDate()
+let year = dateObject.getFullYear()
 let hour = dateObject.getHours()
 let minutes = dateObject.getMinutes()
 let amPm = 'am'
+let city 
+let state
+let time = `${hour}:${minutes}${amPm}`
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds', 'overcast clouds']
+const rain = ['shower rain', 'rain', 'mist']
+let lat 
+let lon 
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`
+const ipLocUrl = `https://api.geoapify.com/v1/ipinfo?&apiKey=${ipKey}`
 
 
 if (minutes < 10) {
@@ -42,20 +49,15 @@ if (hour > 12) {
     hour = hour - 12
 }
 
-
-let time = `${hour}:${minutes}${amPm}`
-console.log(month, date, year, time)
 currentTime.textContent = time
 currentDate.textContent = `${month}/${date}/${year}`
-// let location = `${city},${state}`
 
-const clouds = ['few clouds', 'scattered clouds', 'broken clouds', 'overcast clouds']
-const rain = ['shower rain', 'rain', 'mist']
 
-let lat = 43.6342
-let lon = -70.2816
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`
-let img 
+
+
+
+
+
 
 async function getWeather() {
     try {
@@ -71,7 +73,7 @@ async function getWeather() {
         } else if (rain.includes(condition)) {
             img = 'rain.png'
         } else if (condition == 'thunderstorm') {
-            img = 'rain-storm.png'
+            img = 'img/rain-storm.png'
         } else if (condition == 'snow') {
             img = 'snow.png'
         } else if (condition == 'clear sky') {
@@ -87,19 +89,24 @@ async function getWeather() {
 }
 getWeather()
 
-//  var requestOptions = {
-//      method: 'GET',
-//    };
-  
-//    fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=26568068ee174eaa9ad6a61ffacba666", requestOptions)
-//      .then(response => response.json())
-//      .then(result => console.log(result))
-//      .catch(error => console.log('error', error));
 
-// let url = `https://api.geoapify.com/v1/ipinfo?&apiKey=26568068ee174eaa9ad6a61ffacba666&lat=${lat}&lon=${lon}&loc`
+async function getLocation() {
+    try {
+        const response = await fetch(ipLocUrl)
+        const data = await response.json()
+        city = data.city.name
+        state = data.state.name
+        let myLocation = `${city}, ${state}`
+        console.log(data)
+        lat = data.location.latitude
+        lon = data.location.longitude
+        currentLocation.textContent = myLocation
+    } catch (error) {
+        console.error(error)
+    }
+}
 
-
-
+getLocation()
 
 
 
@@ -143,4 +150,3 @@ upCaretList.forEach(up => {
         dropItemList[caret].style.display='flex'
     })
 })
-
